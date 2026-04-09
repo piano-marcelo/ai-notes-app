@@ -1,0 +1,142 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 700px;
+  height: 100%;
+}
+
+.note-form__heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.note-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.note-form__field--grow {
+  flex: 1;
+  min-height: 0;
+}
+
+.note-form__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.note-form__input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  outline: none;
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.note-form__input:focus {
+  border-color: var(--accent);
+}
+
+.note-form__input--error {
+  border-color: var(--danger);
+}
+
+.note-form__textarea {
+  width: 100%;
+  flex: 1;
+  min-height: 200px;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  resize: vertical;
+  outline: none;
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.note-form__textarea:focus {
+  border-color: var(--accent);
+}
+
+.note-form__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1.2em;
+}
+
+.note-form__error {
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+.note-form__counter {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+.note-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  margin-top: auto;
+}
+
+.note-form__btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition:
+    background var(--transition),
+    opacity var(--transition),
+    transform 0.1s;
+}
+
+.note-form__btn:active {
+  transform: scale(0.98);
+}
+
+.note-form__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.note-form__btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.note-form__btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.note-form__btn--danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.8rem;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  margin-left: auto;
+}
+
+.note-form__btn--danger:hover:not(:disabled) {
+  background: var(--danger);
+  color: #fff;
+}
